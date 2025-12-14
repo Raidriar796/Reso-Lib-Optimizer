@@ -11,19 +11,20 @@ cd /tmp/ResoLibOptimizer
 git clone --depth=1 https://github.com/Yellow-Dog-Man/assimp
 cd assimp
 cmake CMakeLists.txt -DASSIMP_WARNINGS_AS_ERRORS=OFF -DCMAKE_C_FLAGS="$CMAKE_C_FLAGS -O3 -march=native" -DCMAKE_CXX_FLAGS="$CMAKE_CXX_FLAGS -O3 -march=native" 
-cmake --build .
+cmake --build . -j4
 
 # Replace Resonite's assimp files
 rm "${ResoDir}/runtimes/linux-x64/native/libassimp.so"
 cp "/tmp/ResoLibOptimizer/assimp/bin/libassimp.so.5.3.0" "${ResoDir}/runtimes/linux-x64/native/libassimp.so"
 
+# Reset
 cd /tmp/ResoLibOptimizer
 
 # Clone and compile an optimized brotli
 git clone --depth=1 https://github.com/Yellow-Dog-Man/brotli
 cd brotli
 mkdir out && cd out
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=./installed .. -DCMAKE_C_FLAGS="$CMAKE_C_FLAGS -O3 -march=native" 
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=./installed -DCMAKE_C_FLAGS="$CMAKE_C_FLAGS -O3 -march=native" ..
 cmake --build . --config Release
 
 # Replace Resonite's brotli files
@@ -31,3 +32,19 @@ rm "${ResoDir}/brolib_x64.so"
 rm "${ResoDir}/runtimes/linux/native/brolib_x64.so"
 cp "/tmp/ResoLibOptimizer/brotli/out/libbrolib.so" "${ResoDir}/brolib_x64.so"
 cp "/tmp/ResoLibOptimizer/brotli/out/libbrolib.so" "${ResoDir}/runtimes/linux/native/brolib_x64.so"
+
+# Reset
+cd /tmp/ResoLibOptimizer
+
+# Clone and compile an optimized brotli
+git clone --depth=1 https://github.com/Yellow-Dog-Man/crunch
+cd crunch
+mkdir out && cd out
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_FLAGS="$CMAKE_C_FLAGS -O3 -march=native" -DCMAKE_CXX_FLAGS="$CMAKE_CXX_FLAGS -O3 -march=native" -DCMAKE_POLICY_VERSION_MINIMUM=3.5 .. 
+cmake --build . --config Release -j${nproc}
+
+# Replace Resonite's brotli files
+rm "${ResoDir}/libcrnlib.so"
+rm "${ResoDir}/runtimes/linux-x64/native/libcrnlib.so"
+cp "/tmp/ResoLibOptimizer/crunch/out/libcrnlib.so" "${ResoDir}/libcrnlib.so"
+cp "/tmp/ResoLibOptimizer/crunch/out/libcrnlib.so" "${ResoDir}/runtimes/linux-x64/native/libcrnlib.so"
