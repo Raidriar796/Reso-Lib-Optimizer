@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -exuo pipefail
+
 ResoDir="$HOME/.steam/steam/steamapps/common/Resonite"
 
 # Setup work dir and remove if existing
