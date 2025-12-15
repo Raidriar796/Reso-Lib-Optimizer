@@ -13,7 +13,7 @@ Even though Resonite is written primarily in C# - which optimizes itself for you
 - [miniaudio](<https://github.com/LSXPrime/SoundFlow>) - Improves efficiency for the miniaudio backend used by SoundFlow, reducing resource usage for audio processing.
 - [msdfgen](<https://github.com/Yellow-Dog-Man/msdfgen>) - Improves text generation and rendering speed.
 - [opus](<https://github.com/Yellow-Dog-Man/opus>) - Improves opus encode and decode speeds, primarily beneficial for user voices and audio streams.
-- [rnnoise](<https://github.com/Yellow-Dog-Man/rnnoise>) - Improves efficiency for noise suppressionm, this only effects your voice.
+- [rnnoise](<https://github.com/Yellow-Dog-Man/rnnoise>) - Improves efficiency for noise suppression, this only effects your voice.
 
 ### Unaffected Libraries
 - [compressonator](<https://github.com/Yellow-Dog-Man/compressonator>) - Unable to compile, should improve encode and decode speeds for non crunch compressed textures.
