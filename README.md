@@ -41,3 +41,7 @@ cd Reso-Lib-Optimizer
 chmod +x ResoLibOptimizer.sh
 ./ResoLibOptimizer.sh
 ```
+
+## Alternatives
+- [ResoniteBC7EncMod](<https://git.unix.dog/yosh/ResoniteBC7EncMod>) - Mod that replaces compressonator with [bc7enc_rdo](<https://github.com/richgel999/bc7enc_rdo>), which is significantly faster and will be more beneficial to use over even an optimized compressonator build.
+- [Resovips](<https://git.unix.dog/yosh/Resovips>) - Mod that replaces FreeImage with [libvips](<https://github.com/libvips/libvips>), which is generally faster but other bottlenecks are present like the database, limiting performance gains.
