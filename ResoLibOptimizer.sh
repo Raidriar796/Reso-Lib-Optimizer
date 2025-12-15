@@ -45,9 +45,10 @@ cmake -DOPTION_ENABLE_ALL_APPS=OFF -DOPTION_BUILD_CMP_SDK=ON -DOPTION_CMP_QT=OFF
 sed -i '33i\#include <cstdint>\' ./applications/_plugins/common/pluginbase.h
 sed -i -e 's/knl/x86-64-v4/g' ./build/sdk/cmp_core/CMakeLists.txt
 sed -i -e 's/knl/x86-64-v4/g' ./cmp_core/CMakeLists.txt
-sudo sed -i '989d' /usr/include/Imath/half.h
+sudo sed -i 's/using half = IMATH_INTERNAL_NAMESPACE::half;//g' /usr/include/Imath/half.h
 CPLUS_INCLUDE_PATH=/usr/include/opencv4 cmake --build . -j$(nproc)
 sudo sed -i '989i\using half = IMATH_INTERNAL_NAMESPACE::half;\' /usr/include/Imath/half.h
+sudo sed -i '990d' /usr/include/Imath/half.h
 
 # Replace Resonite's compressonator files
 rm "${ResoDir}/libCMP_Compressonator.so"
