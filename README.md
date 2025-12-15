@@ -1,5 +1,5 @@
 # Reso Lib Optimizer
-This is a build script that recompiles native libraries that [Resonite](<https://resonite.com/>) uses, optimized for your local system.
+This is a build script that recompiles native libraries that [Resonite](<https://resonite.com/>) uses, but optimized for your local system.
 
 Even though Resonite is written primarily in C# - which optimizes itself for your system during runtime - there's still a handful of native libraries Resonite uses that are compiled generically. This isn't bad per say, but it leaves a lot of room for performance gains. That's what this script aims to achieve.
 
@@ -8,7 +8,7 @@ Even though Resonite is written primarily in C# - which optimizes itself for you
 ### Affected Libraries
 - [assimp](<https://github.com/Yellow-Dog-Man/assimp>) - Improves asset importing speeds, primarily for 3D models.
 - [brotli](<https://github.com/Yellow-Dog-Man/brotli>) - Improves bson compression and decompression, which can make syncing to the cloud faster.
-- [compressonator](<https://github.com/Yellow-Dog-Man/compressonator>) - Improves BCn texture compression speed, speeding up non crunch compressed texture encoding.
+- [compressonator](<https://github.com/Yellow-Dog-Man/compressonator>) - Improves BCn texture compression speed, speeding up non crunch compressed texture encoding, such as with reflection probes.
 - [crunch](<https://github.com/Yellow-Dog-Man/crunch>) - Improves crunch compression speed, allowing for faster crunch compressed texture generation as well as faster loading for crunch compressed textures.
 - [mikktspace](<https://github.com/Yellow-Dog-Man/Mikktspace.NET>) - Improves mikktspace calculation speed, making tangents and blendshape tangets calculate faster.
 - [miniaudio](<https://github.com/LSXPrime/SoundFlow>) - Improves efficiency for the miniaudio backend used by SoundFlow, reducing resource usage for audio processing.
