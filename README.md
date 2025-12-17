@@ -18,13 +18,13 @@ Even though Resonite is written primarily in C# - which optimizes itself for you
 
 ### Unaffected Libraries
 - [FreeImage](<https://github.com/Yellow-Dog-Man/FreeImage>) - Unable to compile, should improve speed for image encoding, decoding, and modifications.
-- [glfw](<https://github.com/glfw/glfw>) - Purpose unknown, and it may be unused.
-- [onnxruntime](<https://github.com/microsoft/onnxruntime>) - Unable to configure, should reduce resource usage for viseme generation.
-- [phonon](<https://github.com/ValveSoftware/steam-audio>) - Purpose unknown, potentially unused.
+- [glfw](<https://github.com/glfw/glfw>) - Originally used for OpenGL rendering on the old native Linux build. Currently unused.
+- [onnxruntime](<https://github.com/microsoft/onnxruntime>) - Compilation successful in testing, but not yet implemented. Should reduce resource usage for viseme processing.
+- [phonon](<https://github.com/ValveSoftware/steam-audio>) - Not researched yet. Used for audio spatialization.
 - [resonite-clipboard-rs](<https://github.com/Yellow-Dog-Man/resonite-clipboard-rs>) - It's for the clipboard, there's practically no benefit to optimizing this. I may do it anyway if I run out of libraries to do because it's funny or something.
-- [SDL](<https://github.com/Yellow-Dog-Man/SDL>) - SDL is no longer used.
-- [soundpipe](<https://github.com/Yellow-Dog-Man/soundpipe>) - soundpipe was never implemented and was eventually replaced with a C# library instead.
-- [SteamWorks](<https://partner.steamgames.com/doc/sdk/api>) - Purpose not fully known. Source unavailable.
+- [SDL](<https://github.com/Yellow-Dog-Man/SDL>) - Originally used for audio on Linux. Currently unused.
+- [soundpipe](<https://github.com/Yellow-Dog-Man/soundpipe>) - soundpipe was implemented but is currently unused. May be used in the future.
+- [SteamWorks](<https://partner.steamgames.com/doc/sdk/api>) - Used for steam integration. Source unavailable.
 
 ## Warnings
 - The script expects the default install location for Resonite, you can change that directory at the top of the script if you installed Resonite elsewhere.
