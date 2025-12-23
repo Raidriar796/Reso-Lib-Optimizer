@@ -14,7 +14,7 @@ cd /tmp/ResoLibOptimizer
 git clone --depth=1 https://github.com/Yellow-Dog-Man/assimp
 cd assimp
 cmake CMakeLists.txt -DASSIMP_WARNINGS_AS_ERRORS=OFF -DCMAKE_C_FLAGS="${OptimizedFlags}" -DCMAKE_CXX_FLAGS="${OptimizedFlags}" 
-cmake --build . -j4
+cmake --build . -j$(nproc)
 
 # Replace Resonite's assimp files
 rm "${ResoDir}/runtimes/linux-x64/native/libassimp.so"
