@@ -33,8 +33,8 @@ cmake --build . --config Release -j$(nproc)
 # Replace Resonite's brotli files
 rm "${ResoDir}/brolib_x64.so"
 rm "${ResoDir}/runtimes/linux/native/brolib_x64.so"
-cp "/tmp/ResoLibOptimizer/brotli/out/libbrolib.so" "${ResoDir}/brolib_x64.so"
 cp "/tmp/ResoLibOptimizer/brotli/out/libbrolib.so" "${ResoDir}/runtimes/linux/native/brolib_x64.so"
+ln "${ResoDir}/runtimes/linux/native/brolib_x64.so" "${ResoDir}/brolib_x64.so"
 
 # Reset
 cd /tmp/ResoLibOptimizer
@@ -56,10 +56,10 @@ rm "${ResoDir}/libCMP_Compressonator.so"
 rm "${ResoDir}/libCMP_Framework.so"
 rm "${ResoDir}/runtimes/linux-x64/native/libCMP_Compressonator.so"
 rm "${ResoDir}/runtimes/linux-x64/native/libCMP_Framework.so"
-cp "/tmp/ResoLibOptimizer/compressonator/lib/libCMP_Compressonator.so" "${ResoDir}/libCMP_Compressonator.so"
-cp "/tmp/ResoLibOptimizer/compressonator/lib/libCMP_Framework.so" "${ResoDir}/libCMP_Framework.so"
 cp "/tmp/ResoLibOptimizer/compressonator/lib/libCMP_Compressonator.so" "${ResoDir}/runtimes/linux-x64/native/libCMP_Compressonator.so"
 cp "/tmp/ResoLibOptimizer/compressonator/lib/libCMP_Framework.so" "${ResoDir}/runtimes/linux-x64/native/libCMP_Framework.so"
+ln "${ResoDir}/runtimes/linux-x64/native/libCMP_Compressonator.so" "${ResoDir}/libCMP_Compressonator.so"
+ln "${ResoDir}/runtimes/linux-x64/native/libCMP_Framework.so" "${ResoDir}/libCMP_Framework.so"
 
 # Reset
 cd /tmp/ResoLibOptimizer
@@ -74,8 +74,8 @@ cmake --build . --config Release -j$(nproc)
 # Replace Resonite's crunch files
 rm "${ResoDir}/libcrnlib.so"
 rm "${ResoDir}/runtimes/linux-x64/native/libcrnlib.so"
-cp "/tmp/ResoLibOptimizer/crunch/out/libcrnlib.so" "${ResoDir}/libcrnlib.so"
 cp "/tmp/ResoLibOptimizer/crunch/out/libcrnlib.so" "${ResoDir}/runtimes/linux-x64/native/libcrnlib.so"
+ln "${ResoDir}/runtimes/linux-x64/native/libcrnlib.so" "${ResoDir}/libcrnlib.so"
 
 # Reset
 cd /tmp/ResoLibOptimizer
@@ -117,8 +117,8 @@ cmake --build . --config Release -j$(nproc)
 # Replace Resonite's msdfgen files
 rm "${ResoDir}/libmsdfgen.so"
 rm "${ResoDir}/runtimes/linux-x64/native/libmsdfgen.so"
-cp "/tmp/ResoLibOptimizer/msdfgen/out/libmsdfgen.so" "${ResoDir}/libmsdfgen.so"
 cp "/tmp/ResoLibOptimizer/msdfgen/out/libmsdfgen.so" "${ResoDir}/runtimes/linux-x64/native/libmsdfgen.so"
+ln "${ResoDir}/runtimes/linux-x64/native/libmsdfgen.so" "${ResoDir}/libmsdfgen.so"
 
 # Reset
 cd /tmp/ResoLibOptimizer
@@ -134,8 +134,8 @@ cmake --build . --config Release -j$(nproc)
 # Replace Resonite's opus files
 rm "${ResoDir}/libopus.so"
 rm "${ResoDir}/runtimes/linux-x64/native/libopus.so"
-cp "/tmp/ResoLibOptimizer/opus/out/libopus.so.0.10.1" "${ResoDir}/libopus.so"
 cp "/tmp/ResoLibOptimizer/opus/out/libopus.so.0.10.1" "${ResoDir}/runtimes/linux-x64/native/libopus.so"
+ln "${ResoDir}/runtimes/linux-x64/native/libopus.so" "${ResoDir}/libopus.so"
 
 # Reset
 cd /tmp/ResoLibOptimizer
@@ -150,7 +150,7 @@ cmake --build . --config Release -j$(nproc)
 # Replace Resonite's rnnoise files
 rm "${ResoDir}/librnnoise.so"
 rm "${ResoDir}/runtimes/linux-x64/native/librnnoise.so"
-cp "/tmp/ResoLibOptimizer/rnnoise/out/librnnoise.so" "${ResoDir}/librnnoise.so"
 cp "/tmp/ResoLibOptimizer/rnnoise/out/librnnoise.so" "${ResoDir}/runtimes/linux-x64/native/librnnoise.so"
+ln "${ResoDir}/runtimes/linux-x64/native/librnnoise.so" "${ResoDir}/librnnoise.so"
 
 rm -rf /tmp/ResoLibOptimizer
