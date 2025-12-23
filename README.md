@@ -10,6 +10,7 @@ Even though Resonite is written primarily in C# - which optimizes itself for you
 - [brotli](<https://github.com/Yellow-Dog-Man/brotli>) - Improves bson compression and decompression, which can make syncing to the cloud faster.
 - [compressonator](<https://github.com/Yellow-Dog-Man/compressonator>) - Improves BCn texture compression speed, speeding up non crunch compressed texture encoding, such as with reflection probes.
 - [crunch](<https://github.com/Yellow-Dog-Man/crunch>) - Improves crunch compression speed, allowing for faster crunch compressed texture generation as well as faster loading for crunch compressed textures.
+- [FreeImage](<https://github.com/Yellow-Dog-Man/FreeImage>) - Improves speed for image encoding, decoding, and modifications.
 - [mikktspace](<https://github.com/Yellow-Dog-Man/Mikktspace.NET>) - Improves mikktspace calculation speed, making tangents and blendshape tangets calculate faster.
 - [miniaudio](<https://github.com/LSXPrime/SoundFlow>) - Improves efficiency for the miniaudio backend used by SoundFlow, reducing resource usage for audio processing.
 - [msdfgen](<https://github.com/Yellow-Dog-Man/msdfgen>) - Improves text generation and rendering speed.
@@ -17,7 +18,6 @@ Even though Resonite is written primarily in C# - which optimizes itself for you
 - [rnnoise](<https://github.com/Yellow-Dog-Man/rnnoise>) - Improves efficiency for noise suppression, this only effects your voice.
 
 ### Unaffected Libraries
-- [FreeImage](<https://github.com/Yellow-Dog-Man/FreeImage>) - Unable to compile, should improve speed for image encoding, decoding, and modifications.
 - [glfw](<https://github.com/glfw/glfw>) - Originally used for OpenGL rendering on the old native Linux build. Currently unused.
 - [onnxruntime](<https://github.com/microsoft/onnxruntime>) - Compilation successful in testing, but not yet implemented. Should reduce resource usage for viseme processing.
 - [phonon](<https://github.com/ValveSoftware/steam-audio>) - Not researched yet. Used for audio spatialization.
